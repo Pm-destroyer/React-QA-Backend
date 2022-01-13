@@ -68,10 +68,10 @@ app.post('/verifyemployee/', function (req, resp) {
     employeeid = validator.escape(req.body.employeeid);
     domainid = String(employeeid).split('@')[1];
 
-    console.log(employeeid)
+    // console.log(employeeid)
 
     masterModel.get_student(connection, domainid, employeeid, function (err, result) {
-        console.log(employeeid);
+        // console.log(employeeid);
         if ((result.length) == 1) {
             var responseData = {
                 status: 'success',
